@@ -1,0 +1,12 @@
+# Site settings
+title: Cazzar's Development Blog!
+email: me@cazzar.net
+description: "A developer's rambligns"
+baseurl: ""
+url: "http://cazzar.net"
+twitter_username: cazzar99
+github_username:  cazzar
+
+# Build settings
+markdown: kramdown
+permalink: pretty
