@@ -1,0 +1,25 @@
+#!/bin/bash
+IFS='-'
+_time="$(date "+%Y-%m-%d %H:%M:%S")"
+_date="$(date "+%Y-%m-%d")"
+_title="$@"
+_filename="$_date-$*.markdown"
+
+basepost="---
+layout:     post
+title:      \"$_title\"
+date:       $_time
+categories: blog
+---
+
+"
+
+_dirname="_posts"
+if [ "${PWD##*/}" == "_posts" ]; then
+  _dirname="."
+fi
+
+file="$_dirname/$_filename"
+echo "$basepost" > "$file"
+
+$EDITOR "$file"
