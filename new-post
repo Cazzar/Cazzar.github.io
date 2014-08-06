@@ -5,6 +5,11 @@ _date="$(date "+%Y-%m-%d")"
 _title="$@"
 _filename="$_date-$*.markdown"
 
+if [ $# -eq 0 ]; then
+  echo "Usage $0 [Title of post]"
+  exit 1
+fi
+
 basepost="---
 layout:     post
 title:      \"$_title\"
