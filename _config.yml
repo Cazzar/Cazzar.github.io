@@ -1,12 +1,54 @@
-# Site settings
-title: Cazzar's Development Blog!
-email: me@cazzar.net
-description: "A developer's rambligns"
-baseurl: ""
-url: "http://cazzar.net"
-twitter_username: cazzar99
-github_username:  cazzar
+# Site wide configuration
 
-# Build settings
-markdown: kramdown
-permalink: pretty
+title:            Cazzar's Development Blog
+locale:           en_US
+url:              http://localhost:4000
+
+
+# Jekyll configuration
+
+permalink:   /:categories/:title/
+markdown:    kramdown
+highlighter: pygments
+sass:
+  sass_dir: _sass
+  style: compressed
+gems:
+  - jekyll-sitemap
+
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  use_coderay: false
+
+
+# Site owner
+owner:
+  name: Cayde Dixon 
+  avatar: bio-photo.jpg
+  bio: "Independant minecraft modder, developer and gamer."
+  email: me@cazzar.net
+  disqus-shortname: 
+  twitter: cazzar99
+  google:
+    plus: CaydeDixon
+    analytics: 
+    verify: 
+    ad-client: 
+    ad-slot: 
+  bing-verify: 
+  github: cazzar
+  #stackoverflow: #http://stackoverflow.com/users/123456/username
+  #linkedin: #username
+  #instagram: #username
+  #lastfm: #username
+  #tumblr: #username
+  #pinterest: #username
+  #foursquare: #username
+  steam: cazzar
+  #dribbble: #username
+
+include: [".htaccess"]
+exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md"]
