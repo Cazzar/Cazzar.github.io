@@ -9,9 +9,7 @@ categories: [minecraft, tutorials]
 Minecraft has the idea of Tile Entities on the client AND also the server, and they usually need to be kept in sync for the client to reliably predict what the server will do under certain circumstances such as GUIs.
 
 ### Why do we need them?
-There are many reasons for needing the tile entity syncing, such as:
- * Client Server Prediction
- * Client-Only logic that depends on server based variables
+There are many reasons for needing the tile entity syncing, such as; Client-Server Prediction and Client-Only logic that depends on server based variables
 
 ### How do we do it?
 As the title suggests, this is a quick bit of code that will allow for you to sync up your tile entites and all we need to do is add 2 simple functions to our ```TileEntity``` classes.
