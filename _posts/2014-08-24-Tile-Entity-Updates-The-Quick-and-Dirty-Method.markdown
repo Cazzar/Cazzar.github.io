@@ -59,3 +59,6 @@ public void markForUpdate() {
 {% endhighlight %}
 
 This allows for quick and simple updating without having to remember to call the right params for a little more JVM overhead (terms of picoseconds).
+
+#### Other Notes
+You may have realised that this is described as a quick and dirty hack for syncing your minecraft tile entities, there are multiple places such as heavy updating and large amounts of infomration where it would be much more efficant to use a different, more advanced apporoach other than ```S35PacketUpdateTileEntity```
