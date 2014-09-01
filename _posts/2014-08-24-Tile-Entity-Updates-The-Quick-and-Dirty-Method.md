@@ -2,14 +2,11 @@
 layout:     post
 title:      "Tile Entity Updates, The Quick and Dirty Method"
 date:       2014-08-24 23:13:52
-exerpt:     "A quick and dirty hack to allow"
+excerpt:     "A quick and dirty hack to allow syncronisation of tile entities"
 categories: [minecraft, tutorials]
 ---
 
 <section id="table-of-contents" class="toc">
-  <header>
-    <h3>Overview</h3>
-  </header>
 <div id="drawer" markdown="1">
 *  Auto generated table of contents
 {:toc}
