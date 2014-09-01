@@ -44,7 +44,7 @@ public class SampleMessage implements IMessage {
     }
 
     /**
-     * This is to read your bytes when recieving the packet.
+     * This is to read your bytes when receiving the packet.
      */
     @Override
     public void fromBytes(ByteBuf buf) {
@@ -63,7 +63,7 @@ public class SampleMessage implements IMessage {
      */
     public static class Handler implements IMessageHandler<SampleMessage, IMessage> {
         /**
-         * This gets called when the packet is read and recieved.
+         * This gets called when the packet is read and received.
          */
         @Override
         public IMessage onMessage(SampleMessage message, MessageContext ctx) {
@@ -73,7 +73,7 @@ public class SampleMessage implements IMessage {
 }
 {% endhighlight %}
 
-As you can see, this is only a boilerplate class and effectively does nothing on sending and recieving the packet but can be easily expanded by adding paramaters and the functionality to the ```fromBytes(ByteBuf)``` and ```toBytes(ByteBuf)``` functions.
+As you can see, this is only a boilerplate class and effectively does nothing on sending and receiving the packet but can be easily expanded by adding paramaters and the functionality to the ```fromBytes(ByteBuf)``` and ```toBytes(ByteBuf)``` functions.
 
 ### Adding Functionality
 
@@ -126,7 +126,7 @@ public static class Handler implements IMessageHandler<SampleMessage, IMessage> 
 
 Notice how, in the handler, we use message.value but not value in reference to the parent class? this is because the message is not handled in the same instance of the Handler as it was decoded, so it is reccomended to make it a inner class so you avoid using the wrong param.
 
-Right about now, we are returning null for the ```onMessage``` function, and what the return value for that is a reply message to send back to the client when recieved.
+Right about now, we are returning null for the ```onMessage``` function, and what the return value for that is a reply message to send back to the client when received.
 
 ### Registration and Sending
 
