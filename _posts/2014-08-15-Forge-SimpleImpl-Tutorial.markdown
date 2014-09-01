@@ -84,9 +84,9 @@ So, for this example we will obviously need a field of what our random integer w
 So, we end up changing a small part of the class to be:
 
 {% highlight java %}
-private value;
+private int value;
 
-public public SampleMessage() {
+public SampleMessage() {
     this.value = new Random().nextInt();
 }
 {% endhighlight %}
