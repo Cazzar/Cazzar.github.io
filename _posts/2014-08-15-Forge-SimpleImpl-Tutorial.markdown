@@ -26,7 +26,7 @@ Writing a message for Netty is a relatively painless process that can be assiste
 
 Each message _has_ to implement ```cpw.mods.fml.common.network.simpleimpl.IMessage``` so that the SimpleNetworkWrapper can know how to encode and decode your message.
 
-There is also the seondary requirement for all messages, an ```IMessageHandler<REQ, REPLY>``` which is reccomended to either have as an entirely seperate class, or as an inner class of the ```IMessage``` to keep the code within the same place.
+There is also the secondary requirement for all messages, an ```IMessageHandler<REQ, REPLY>``` which is reccomended to either have as an entirely seperate class, or as an inner class of the ```IMessage``` to keep the code within the same place.
 
 An example message can be shown as follows.
 
