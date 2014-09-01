@@ -130,7 +130,7 @@ Right about now, we are returning null for the ```onMessage``` function, and wha
 
 ### Registration and Sending
 
-To be able to send this Message we need to register the message back with the SimpleNetworkWrapper we created in (Creating the Channel)[#creating-the-channel] by using the function
+To be able to send this Message we need to register the message back with the SimpleNetworkWrapper we created in [Creating the Channel](#creating-the-channel) by using the function
 
 {% highlight java %}
 INSTANCE.registerMessage(SampleMessage.Handler.class, SampleMessage.class, 0, Side.SERVER);
