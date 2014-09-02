@@ -6,6 +6,16 @@ exerpt:     "A quick and dirty hack to allow"
 categories: [minecraft, tutorials]
 ---
 
+<section id="table-of-contents" class="toc">
+  <header>
+    <h3>Overview</h3>
+  </header>
+<div id="drawer" markdown="1">
+*  Auto generated table of contents
+{:toc}
+</div>
+</section><!-- /#table-of-contents -->
+
 Minecraft has the idea of Tile Entities on the client AND also the server, and they usually need to be kept in sync for the client to reliably predict what the server will do under certain circumstances such as GUIs.
 
 ### Why do we need them?

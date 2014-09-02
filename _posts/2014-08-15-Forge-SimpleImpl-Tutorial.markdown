@@ -6,6 +6,16 @@ date:       2014-08-15 21:43:42
 categories: [minecraft, tutorials]
 ---
 
+<section id="table-of-contents" class="toc">
+  <header>
+    <h3>Overview</h3>
+  </header>
+<div id="drawer" markdown="1">
+*  Auto generated table of contents
+{:toc}
+</div>
+</section><!-- /#table-of-contents -->
+
 Forge Mod Loader or FML has multiple ways for handling packets, some are not reccomended such as [this][netty_tutorial] and if you can load that page (Sometimes the MinecraftForge wiki is down) CPW has kindly left a large notice saying that that method **WILL** result in a memory leak. CPW there also suggested that we use the SimpleNetworkWrapper that has been out for a while.
 
 ### What is it?
