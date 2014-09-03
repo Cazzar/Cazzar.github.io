@@ -10,6 +10,9 @@ if [ $# -eq 0 ]; then
   exit 1
 fi
 
+echo "Please use octopress to create a blog posts."
+exit 0
+
 basepost="---
 layout:     post
 title:      \"$_title\"
