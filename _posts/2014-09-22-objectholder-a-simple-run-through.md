@@ -59,6 +59,11 @@ public class JukeboxReloadedBlocks {
 
 As you can see here, it can be hugely dynamic, and it even keeps up to date for any aliases[^alias-tut] that are placed on any blocks or items in the GameRegistry for Minecraft
 
+How Can This be Useful?
+=======================
+
+Most mod APIs supply a method of linking to their Blocks and items, but it is commonly said, in the JVM, reflection is relatively slow, and many proprietary mods, provide a reflection based API. But here, we can drop those APIs if we are using __just__ the blocks.
+
 [^minecraft]: Though, it is possible using the FML system, it is not recommended that you use the ``@OjbectHolder`` annotation to look up vanilla blocks or items, since they are easily accessible from the respective classes in ``net.minecraft.init``
 [^itemname]: in the format of *modid:name*
 [^alias-tut]: To be covered in a later date (once I work this out).
