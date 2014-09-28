@@ -6,8 +6,6 @@ categories: [tutorials, fml]
 excerpt: FML's @Optional annotation set, how it works and some of the idea's behind it.
 tags: [fml, tutorials, minecraft, Optional]
 comments: true
-image:
-  feature:
 date: 2014-09-25T12:51:07+10:00
 ---
 

@@ -5,6 +5,7 @@ categories: [tutorials, fml]
 excerpt: We go over how the FML ObjectLoader annotation works.
 tags: [tutorials, fml]
 date: 2014-09-22T19:10:46+10:00
+comments: true
 ---
 
 Forge Mod Loader has an interesting addition that can be used in the placement of fields in relation to the instances of the Minecraft Items, including the modded items within it's own system.
