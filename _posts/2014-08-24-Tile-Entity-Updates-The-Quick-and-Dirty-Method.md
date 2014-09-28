@@ -2,8 +2,8 @@
 layout:     post
 title:      "Tile Entity Updates, The Quick and Dirty Method"
 date:       2014-08-24 23:13:52
-excerpt:     "A quick and dirty hack to allow syncronisation of tile entities"
-categories: [minecraft, tutorials]
+excerpt:    "A quick and dirty hack to allow syncronisation of tile entities"
+categories: [tutorials, minecraft]
 ---
 
 <section id="table-of-contents" class="toc">

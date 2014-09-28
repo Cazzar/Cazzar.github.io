@@ -2,7 +2,7 @@
 layout: post
 title: "Optional Annotations, the Usages"
 modified:
-categories: [fml, tutorials] 
+categories: [tutorials, fml] 
 excerpt: FML's @Optional annotation set, how it works and some of the idea's behind it.
 tags: [fml, tutorials, minecraft, Optional]
 comments: true

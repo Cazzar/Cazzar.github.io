@@ -3,7 +3,7 @@ layout:     post
 title:      "ForgeGradle and Java 8, A Hackers Guide"
 date:       2014-09-01 19:51:56
 exerpt:     "A small hack guide for getting ForgeGradle to compile for Java 8 and still allowing them to load in older environments"
-categories: [ForgeGradle, tutorials]
+categories: [tutorials, ForgeGradle]
 ---
 
 For those who follow my [GitHub] account, you may know of the [ForgeGradle-Scripts] repository that I have been working on with the kind help of [Ntzrmtthihu777] where we have been compiling a series of scripts to facilitate a Minecraft modder's term in the idea of a plug-and-play type system for making a build script allowing but more of that in another post at a later date.

@@ -3,7 +3,7 @@ layout:     post
 title:      Forge SimpleImpl Tutorial (1.7.x)
 excerpt:    "A tutorial on using the FML for minecraft 1.7.x Netty implementation of SimpleNetworkWrapper"
 date:       2014-08-15 21:43:42
-categories: [minecraft, tutorials]
+categories: [tutorials, minecraft]
 ---
 
 <section id="table-of-contents" class="toc">
