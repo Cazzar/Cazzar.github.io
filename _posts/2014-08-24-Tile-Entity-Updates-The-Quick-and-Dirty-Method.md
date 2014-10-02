@@ -2,7 +2,7 @@
 layout:     post
 title:      "Tile Entity Updates, The Quick and Dirty Method"
 date:       2014-08-24 23:13:52
-excerpt:    "A quick and dirty hack to allow syncronisation of tile entities"
+excerpt:    "A quick and dirty hack to allow synchronization of tile entities"
 categories: [tutorials, minecraft]
 comments:   true
 ---
@@ -20,7 +20,7 @@ Minecraft has the idea of Tile Entities on the client AND also the server, and t
 There are many reasons for needing the tile entity syncing, such as; Client-Server Prediction and Client-Only logic that depends on server based variables
 
 ### How do we do it?
-As the title suggests, this is a quick bit of code that will allow for you to sync up your tile entites and all we need to do is add 2 simple functions to our ```TileEntity``` classes.
+As the title suggests, this is a quick bit of code that will allow for you to sync up your tile entities and all we need to do is add 2 simple functions to our ```TileEntity``` classes.
 
 #### Sending
 Firstly we need a ```getDescriptionPacket()``` function which we will set the contents of the packet to be the NBT that we save to disk when the Tile is saved so we would add the code.
@@ -42,8 +42,8 @@ import net.minecraft.network.Packet;
 import net.minecraft.network.play.server.S35PacketUpdateTileEntity;
 {% endhighlight %}
 
-#### Recieving
-Now, that we can send the packet (theoretically, it isnt doing anything, _yet_) we need to set up the logic to recieve the packet, also known as ```onDataPacket(NetworkManager, S35PacketUpdateTileEntity)```
+#### Receiving
+Now, that we can send the packet (theoretically, it isn't doing anything, _yet_) we need to set up the logic to receive the packet, also known as ```onDataPacket(NetworkManager, S35PacketUpdateTileEntity)```
 
 {% highlight java %}
 @Override
@@ -66,7 +66,7 @@ public void markForUpdate() {
 }
 {% endhighlight %}
 
-This allows for quick and simple updating without having to remember to call the right params for a little more JVM overhead (terms of picoseconds).
+This allows for quick and simple updating without having to remember to call the right params for a little more JVM overhead (terms of microseconds).
 
 #### Other Notes
-You may have realised that this is described as a quick and dirty hack for syncing your minecraft tile entities, there are multiple places such as heavy updating and large amounts of infomration where it would be much more efficant to use a different, more advanced apporoach other than ```S35PacketUpdateTileEntity```
+You may have realized that this is described as a quick and dirty hack for syncing your Minecraft tile entities, there are multiple places such as heavy updating and large amounts of information where it would be much more efficient to use a different, more advanced approach other than ```S35PacketUpdateTileEntity```

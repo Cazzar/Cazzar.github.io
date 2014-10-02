@@ -2,7 +2,7 @@
 layout: post
 title: "FML ObjectHolder, a Simple Run Through"
 categories: [tutorials, fml]
-excerpt: We go over how the FML ObjectLoader annotation works.
+excerpt: We go over how the FML ObjectHolder annotation works.
 tags: [tutorials, fml]
 date: 2014-09-22T19:10:46+10:00
 comments: true
@@ -39,7 +39,7 @@ For example, the annotation could be
 public static final Block jukebox = null;
 {% endhighlight %}
 
-__Pro-tip:__ The initialisation of the field is done so the java compiler does not complain, but it is set by FML in the runtime.
+__Pro-tip:__ The initialization of the field is done so the java compiler does not complain, but it is set by FML in the run-time.
 {: .notice}
 
 ### Class and Field level

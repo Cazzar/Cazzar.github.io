@@ -2,7 +2,7 @@
 layout:     post
 title:      "ForgeGradle and Java 8, A Hackers Guide"
 date:       2014-09-01 19:51:56
-exerpt:     "A small hack guide for getting ForgeGradle to compile for Java 8 and still allowing them to load in older environments"
+excerpt:     "A small hack guide for getting ForgeGradle to compile for Java 8 and still allowing them to load in older environments"
 categories: [tutorials, ForgeGradle]
 ---
 
@@ -36,7 +36,7 @@ tasks.withType(JavaCompile) {
 {% endhighlight %}
 Which, in any case outside of ForgeGradle is enough to say to Gradle anyway that we are targeting Java SE 8 byte code. Whereas in the case of FML, it has inner dependencies of ASM 4.0.1 and the earliest release to have Java 8 support in ASM is version 5.0.0.  
 
-So, do we just add in the dependencies to look at ``mavenCentral()`` and then apply our own dependency of ``compile 'org.ow2.asm:asm-debug-all:5.0.3'``? Well, that is part of the solution, because another part of this hack, as I am calling it, also has a prioritisation to the factor of compatibility, since when we end up running the ``gradle build`` and grabbing the generated jar files, it will not load in Minecraft, why? Well, to put it simply, ASM 4.0.1 as FML uses, does not understand it!
+So, do we just add in the dependencies to look at ``mavenCentral()`` and then apply our own dependency of ``compile 'org.ow2.asm:asm-debug-all:5.0.3'``? Well, that is part of the solution, because another part of this hack, as I am calling it, also has a prioritization to the factor of compatibility, since when we end up running the ``gradle build`` and grabbing the generated jar files, it will not load in Minecraft, why? Well, to put it simply, ASM 4.0.1 as FML uses, does not understand it!
 
 Getting it to work
 ------------------

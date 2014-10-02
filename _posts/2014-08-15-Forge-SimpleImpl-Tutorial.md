@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Forge SimpleImpl Tutorial (1.7.x)
-excerpt:    "A tutorial on using the FML for minecraft 1.7.x Netty implementation of SimpleNetworkWrapper"
+excerpt:    "A tutorial on using the FML for Minecraft 1.7.x Netty implementation of SimpleNetworkWrapper"
 date:       2014-08-15 21:43:42
 categories: [tutorials, minecraft]
 comments:   true
@@ -17,7 +17,7 @@ comments:   true
 </div>
 </section><!-- /#table-of-contents -->
 
-Forge Mod Loader or FML has multiple ways for handling packets, some are not reccomended such as [this][netty_tutorial] and if you can load that page (Sometimes the MinecraftForge wiki is down) CPW has kindly left a large notice saying that that method **WILL** result in a memory leak. CPW there also suggested that we use the SimpleNetworkWrapper that has been out for a while.
+Forge Mod Loader or FML has multiple ways for handling packets, some are not recommended such as [this][netty_tutorial] and if you can load that page (Sometimes the MinecraftForge wiki is down) CPW has kindly left a large notice saying that that method **WILL** result in a memory leak. CPW there also suggested that we use the SimpleNetworkWrapper that has been out for a while.
 
 ### What is it?
 
@@ -37,7 +37,7 @@ Writing a message for Netty is a relatively painless process that can be assiste
 
 Each message _has_ to implement ```cpw.mods.fml.common.network.simpleimpl.IMessage``` so that the SimpleNetworkWrapper can know how to encode and decode your message.
 
-There is also the secondary requirement for all messages, an ```IMessageHandler<REQ, REPLY>``` which is reccomended to either have as an entirely seperate class, or as an inner class of the ```IMessage``` to keep the code within the same place.
+There is also the secondary requirement for all messages, an ```IMessageHandler<REQ, REPLY>``` which is recommended to either have as an entirely separate class, or as an inner class of the ```IMessage``` to keep the code within the same place.
 
 An example message can be shown as follows.
 
@@ -84,7 +84,7 @@ public class SampleMessage implements IMessage {
 }
 {% endhighlight %}
 
-As you can see, this is only a boilerplate class and effectively does nothing on sending and receiving the packet but can be easily expanded by adding paramaters and the functionality to the ```fromBytes(ByteBuf)``` and ```toBytes(ByteBuf)``` functions.
+As you can see, this is only a boilerplate class and effectively does nothing on sending and receiving the packet but can be easily expanded by adding parameters and the functionality to the ```fromBytes(ByteBuf)``` and ```toBytes(ByteBuf)``` functions.
 
 ### Adding Functionality
 
@@ -135,7 +135,7 @@ public static class Handler implements IMessageHandler<SampleMessage, IMessage> 
 }
 {% endhighlight %}
 
-Notice how, in the handler, we use message.value but not value in reference to the parent class? this is because the message is not handled in the same instance of the Handler as it was decoded, so it is reccomended to make it a inner class so you avoid using the wrong param.
+Notice how, in the handler, we use message.value but not value in reference to the parent class? this is because the message is not handled in the same instance of the Handler as it was decoded, so it is recommended to make it a inner class so you avoid using the wrong parameter.
 
 Right about now, we are returning null for the ```onMessage``` function, and what the return value for that is a reply message to send back to the client when received.
 
@@ -147,7 +147,7 @@ To be able to send this Message we need to register the message back with the Si
 INSTANCE.registerMessage(SampleMessage.Handler.class, SampleMessage.class, 0, Side.SERVER);
 {% endhighlight %}
 
-To explain the values of ```registerMessage``` it is firstly the _class_ of  the **handler** for the message, then the _class_ of the message itself, a *discrimiator* (make it unique for all messages) and then the side the packet gets sent to.
+To explain the values of ```registerMessage``` it is firstly the _class_ of  the **handler** for the message, then the _class_ of the message itself, a *discriminator* (make it unique for all messages) and then the side the packet gets sent to.
 
 Sending the message is as just as easy as running the sendToServer function on the client.
 

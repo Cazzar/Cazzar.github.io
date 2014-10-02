@@ -30,7 +30,7 @@ For this, as you have guessed there is the ``@Optional.Method`` or the ``@Option
 Using this, is relatively simple understanding that you know some of it's constraints which are as follows:
 
  1. References to the function __*will not*__ be stripped if the function is.
- 2. The function and it's existence will not be true unless the Forge Mod Loader has loaded that mod as well as your's
+ 2. The function and it's existence will not be true unless the Forge Mod Loader has loaded that mod as well as yours
 
 Understanding these constraints within the system, we can work around the first one using FML's ``Loader.isModLoaded(modname)`` wrapping those around various function references, tough looking at that type of code can be quite messy.
 
@@ -56,7 +56,7 @@ For this, we are combining the explanation of the two Interface bases annotation
 
 With ``@Optional.Interface`` it comes with the same caveats as ``@Optional.Method`` but, in a slightly different way.
 
- 1. Casting of the instances of the class to that said interface __*will*__ cause a ``ClassCastException`` at runtime (if the class is in the classpath) or even a ``ClassNotFoundExeption``
+ 1. Casting of the instances of the class to that said interface __*will*__ cause a ``ClassCastException`` at run time (if the class is in the class path) or even a ``ClassNotFoundExeption``
  2. The interface and all references (optional) will be stripped from the class.
 
 Yet again, this can be worked around with the ``Loader.isModLoaded(modname)`` function.
