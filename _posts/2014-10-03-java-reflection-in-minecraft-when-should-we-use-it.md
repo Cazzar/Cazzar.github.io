@@ -23,6 +23,10 @@ So, knowing this bit of information, how should the reflection be used? Or, bett
 
 This is one of the easier questions to be answered here, when we should use it. The answer here is quite simple, understanding the more modern alternatives, such as FMLAT, we should only do reflection based interactions in circumstances where speed is not of the essence, such as __*as*__ FML's TickEvent or any of it's Sub-classes nor within your renders, especially when it is done on game frame
 
+An example that I have for when java reflection should be used, hypothetically is, you have a block and it is checking for something on a neighboring tile entity for a little bit of data they expose, but only on a certain event that happens, many people do accept reflection here, which is taken as a lighter use for it.
+
+__Note:__ There can be many more uses, I do not have the time to be writing them up, if you have some, comment below!
+
 ### How Should Reflection be Used?
 
 When we are working with reflection, and we know that we are going to access this field or method commonly is to cache, at least the Object that ``Class.getDeclaredField`` or ``Class.getDeclaredMethod`` returns because, out of all that, the getDeclared... methods return the slowest.
