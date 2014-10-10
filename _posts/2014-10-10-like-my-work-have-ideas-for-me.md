@@ -14,6 +14,8 @@ I have multiple methods and points of contact, even if you want to give me a don
 
 For me, pushing out mods (even though I don't have many, though I have one planned) and even, as those who are regular to the site, would notice, the tutorials, which you can look over at the top, for me, take some time to write up and other times, I cannot always push one, because issues, and not enough time.
 
+But, in the terms of ideas, if you want to give me mod ideas, feel free to email them to me, if you want them in private, or contact me on IRC, which are both linked either in the top or the sidebar.
+
 Personally, I don't entirely like having to push out anything like this, because, I am not usually one to beg, maybe playfully prod about the factor that I need something in a group of friends, but here, looking at my finances, I am not in the best of standings. Will I survive? Yes, but not to what I would like.
 
 [Patreon]: http://www.patreon.com/cazzar
