@@ -6,6 +6,11 @@ excerpt:     "A small hack guide for getting ForgeGradle to compile for Java 8 a
 categories: [tutorials, ForgeGradle]
 ---
 
+__Disclaimer:__ This is considered a *massive* hack, and is only really done for a proof-of-concept purpose.
+If you really want to do this in a more, supported mannerism, have a look at (Scala)[http://scala-lang.org/]
+{: .notice}
+
+
 For those who follow my [GitHub] account, you may know of the [ForgeGradle-Scripts] repository that I have been working on with the kind help of [Ntzrmtthihu777] where we have been compiling a series of scripts to facilitate a Minecraft modder's term in the idea of a plug-and-play type system for making a build script allowing but more of that in another post at a later date.
 
 One of the scripts in this system is [7.retrolambda.gradle] which, using a few small hacks\* allow us to use some of the basic Java 8 constructs such as the Lambda, for example:
@@ -36,6 +41,8 @@ tasks.withType(JavaCompile) {
 {% endhighlight %}
 Which, in any case outside of ForgeGradle is enough to say to Gradle anyway that we are targeting Java SE 8 byte code. Whereas in the case of FML, it has inner dependencies of ASM 4.0.1 and the earliest release to have Java 8 support in ASM is version 5.0.0.  
 
+From here, there is an older thing that we had to do in older versions for FML to allow for newer java classes to be ran, though nowadays it is no longer needed for forge due to a satisfactory ASM version.
+
 So, do we just add in the dependencies to look at ``mavenCentral()`` and then apply our own dependency of ``compile 'org.ow2.asm:asm-debug-all:5.0.3'``? Well, that is part of the solution, because another part of this hack, as I am calling it, also has a prioritization to the factor of compatibility, since when we end up running the ``gradle build`` and grabbing the generated jar files, it will not load in Minecraft, why? Well, to put it simply, ASM 4.0.1 as FML uses, does not understand it!
 
 Getting it to work
@@ -43,6 +50,9 @@ Getting it to work
 After a lot of research I have found a nifty tool called [Retrolambda] and a gradle plugin for it, [Gradle-Retrolambda] after a bit of tinkering around with the plugin I have determined how to properly use this plugin when using ForgeGradle.
 
 So, to get this working, with ForgeGradle, as explained in the [Gradle Retrolambda][Gradle-Retrolambda] github page, we need to add ``'me.tatarka:gradle-retrolambda:2.2.3'`` to the buildscript __classpath__ and then, after the ``apply plugin: 'forge'`` we need to add yet another plugin to be applied, ``retrolambda``.
+
+__Notice:__  This is not needed if you have __*JAVA_HOME*__ pointing towards a valid JDK8 install.
+{: .notice}
 
 There are some more. Advanced configuration that you can do when applying the plugin which is documented at the GitHub page and it also assumes the __*JAVA6_HOME*__, __*JAVA7_HOME*__ and __*JAVA8_HOME*__ environment variables exist (you only need __1__ of 6 OR 7) pointing towards a valid JDK install.
 
