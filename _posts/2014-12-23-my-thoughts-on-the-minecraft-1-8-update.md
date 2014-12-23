@@ -4,7 +4,7 @@ title: "My Thoughts on the Minecraft 1.8 Update"
 modified:
 categories: [blog, minecraft, mc1.8]
 excerpt: Just my ramblings about the Minecraft 1.8 update and what it can mean to the modders.
-comments: false
+comments: true
 tags: [blog, Minecraft, mc1.8]
 image:
   feature:

@@ -4,7 +4,7 @@ title: {{ title }}
 modified:
 categories: {{ dir }}
 excerpt:
-comments: false
+comments: true
 tags: []
 image:
   feature:
