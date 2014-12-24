@@ -31,7 +31,7 @@ Also, another annoying thing with the new system, which is just more of an incon
 Where do I think this is going?
 ==================
 
-Now, if you look at the changes Mojang have done so-far to Minecraft's internals over the last couple of major revisions, there has been quite the rework, firstly internally with UUIDs (which is just changing the string to reference in most cases) the Souns System getting a wrapper over it (since it is still accessible via some methods) which allowed modders to specify their sound files to be added in a nifty local way. While this is all well and good up to here[^personal] when you start getting to the Minecraft 1.8 changes, it isn't so great.
+Now, if you look at the changes Mojang have done so-far to Minecraft's internals over the last couple of major revisions, there has been quite the rework, firstly internally with UUIDs (which is just changing the string to reference in most cases) the Sound System getting a wrapper over it (since it is still accessible via some methods) which allowed modders to specify their sound files to be added in a nifty local way. While this is all well and good up to here[^personal] when you start getting to the Minecraft 1.8 changes, it isn't so great.
 
 In some cases, such as the block models, it is nice to be able to define custom rendered blocks like they do in the 1.7 or lower ISpecialBlockRenderer classes just declaring them in JSON, it seems that Minecraft is moving towards a very declarative manner of coding. Some people even going to the point of saying it is a modding in a resource-pack sense, or even saying they are coding a plugin API not a modding API.
 
