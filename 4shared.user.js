@@ -1,14 +1,24 @@
 // ==UserScript==
 // @name         4Shared hacks
 // @namespace    http://cazzar.net/
-// @version      1.0
+// @version      2
 // @description  A various amount of scripts to add to 4shared in relation to some of it's annoying features.
-// @require      http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
+// @update       http://cazzar.net/4shared.user.js
 // @author       Cazzar
-// @match        http://www.4shared.com/*
+// @include      http://www.4shared.com/*
+// @include      http*://www.4shared.com/get/*
 // @grant        none
 // ==/UserScript==
+var $ = unsafeWindow.jQuery;
+
+$(unsafeWindow).load(function () {
+  var time = 20;
+  $(".adBlockWarningMessage").remove();
+  $("#downloadDelayTimeSec").text(time);
+  $("#secondsLeft").val(time);
+  Events.fireEvent("change.seconds.left", time);
+});
 
 $(function () {
-    $("#btnLink").attr("onclick", "");
+  $("#btnLink").attr("onclick", "");
 });
