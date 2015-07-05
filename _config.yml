@@ -47,7 +47,7 @@ owner:
   #tumblr: #username
   #pinterest: #username
   #foursquare: #username
-  steam: cazzar
+  #steam: cazzar
   #dribbble: #username
 
 include: [".htaccess"]
