@@ -93,7 +93,7 @@ This itself, would seem self-explanatory though I have had cases, which initiall
 
 ## An Unrelated note.
 
-When there was a discussion on what the icon for Discord is, I weirdly noticed, it was like the current avatar for PinocchioP who is a vocaloid producer which you can find on (YouTube)[https://www.youtube.com/user/pinocchiopchannel] though this can probably be just me noticing similarities where they are not intended.
+When there was a discussion on what the icon for Discord is, I weirdly noticed, it was like the current avatar for PinocchioP who is a vocaloid producer which you can find on [YouTube](https://www.youtube.com/user/pinocchiopchannel) though this can probably be just me noticing similarities where they are not intended.
 
 [Discord]: https://discordapp.com/
 [^revoked]: Any of the keys here are invalid and therefore unusable.  
