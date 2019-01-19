@@ -2,7 +2,7 @@
 
 title:            Cazzar's Development Blog
 locale:           en_US
-url:              http://cazzar.net
+url:              https://cazzar.net
 
 
 # Jekyll configuration
@@ -28,7 +28,7 @@ kramdown:
 owner:
   name: Cayde Dixon 
   avatar: bio-photo.jpg
-  bio: "Independant minecraft modder, developer and gamer."
+  bio: "Independent minecraft modder, developer and gamer."
   email: me@cazzar.net
   disqus-shortname: cazzar
   twitter: cazzar99
